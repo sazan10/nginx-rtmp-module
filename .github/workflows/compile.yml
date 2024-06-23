@@ -13,5 +13,5 @@ jobs:
 
     - name: Build C Code
       run: |
-        ./configure
+        ./configure --add-module=.
         make
