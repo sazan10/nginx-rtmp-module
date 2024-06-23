@@ -10,8 +10,14 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: 2fb11dffaedc5af66b1442b0315c54a4b9da585d
-
+    - name: Install wget
+      run: sudo apt-get install wget
+    - name: Install nginx
+      run: |
+        wget http://nginx.org/download/nginx-1.16.1.tar.gz
+        tar xf nginx-1.16.1
     - name: Build C Code
       run: |
-        sudo ./config --add-module=.
+        cd nginx-1.16.1
+        sudo ./config --add-module=../
         make
