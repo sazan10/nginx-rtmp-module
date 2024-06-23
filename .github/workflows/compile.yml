@@ -19,5 +19,5 @@ jobs:
     - name: Build C Code
       run: |
         cd nginx-1.16.1
-        sudo ./config --add-module=../
+        ./configure --add-module=../
         make
