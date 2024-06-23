@@ -15,7 +15,7 @@ jobs:
     - name: Install nginx
       run: |
         wget http://nginx.org/download/nginx-1.16.1.tar.gz
-        tar xf nginx-1.16.1
+        tar -xf nginx-1.16.1.tar.gz
     - name: Build C Code
       run: |
         cd nginx-1.16.1
